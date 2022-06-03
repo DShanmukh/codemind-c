@@ -1,15 +1,18 @@
-#include<stdio.h>
-int main ()
+#include <stdio.h>
+int main()
 {
-    int a,b,i,max;
-    scanf("%d%d",&a,&b);
-    max=(a>b) ? a:b;
-    for(i=max;i<=a*b;i++)
-    if(i%a==0 && i%b==0)
+    int n1, n2, max;
+    scanf("%d %d", &n1, &n2);
+    max = (n1 > n2) ? n1 : n2;
+
+    while (1) 
     {
-        break;
+        if (max % n1 == 0 && max % n2 == 0)
+        {
+            printf("%d", max);
+            break;
+        }
+        ++max;
     }
-    printf("%d",i);
     return 0;
-    
 }
