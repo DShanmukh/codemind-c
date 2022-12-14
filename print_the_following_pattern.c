@@ -1,24 +1,16 @@
 #include<stdio.h>
- int main()
+int main()
 {
-   int i,j,rows;
-  
-   scanf("%d",&rows);
-   for(i=0;i<rows;i++)
-   {
-      for(j=0;j<rows;j++)
-      {
-          if(i==j)
-          {
-              printf("0");
-          }
-          else
-          {
-              printf("x");
-          }
-          
-      }
-      printf("
+    int n;
+    scanf("%d",&n);
+    int i,j;
+    for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%d",j);
+        }
+        printf("
 ");
-      }
+    }
 }
